@@ -3,9 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
     <title>ที่พัก</title>
 </head>
-<body>
-    
+<body class="flex flex-col h-screen overflow-hidden m-0 p-0">
+    <nav class="bg-blue-500 text-white p-4 flex-shrink-0 shadow-lg">
+      <div class="container mx-auto flex justify-between items-center">
+          <div class="text-2xl font-bold">ที่พัก</div>
+          <ul class="hidden md:flex space-x-6">
+              <li><a href="teepak.html" class="hover:text-yellow-300">ที่พัก</a></li>
+              <li><a href="activity.html" class="hover:text-yellow-300">กิจกรรม ภีม</a></li>
+              <li><a href="review.html" class="hover:text-yellow-300">รีวิว ปาล์ม</a></li>
+              <li><a href="contact.html" class="hover:text-yellow-300">ติดต่อ เบท</a></li>
+          </ul>
+      </div>
+    </nav>
+
+    <main class="flex-grow overflow-auto p-4 bg-gray-100">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105">
+                <img src="./images/deluxe-king-1.jpg" alt="ที่พัก 1" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-bold mb-2">ที่พัก 1</h2>
+                    <p class="text-gray-700">รายละเอียดที่พัก 1</p>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2 hover:bg-blue-600" onclick="bookRoom()">จองห้อง</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105">
+                <img src="./images/grand-deluxe_skyline-view_king.jpg" alt="ที่พัก 2" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-bold mb-2">ที่พัก 2</h2>
+                    <p class="text-gray-700">รายละเอียดที่พัก 2</p>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2 hover:bg-blue-600" onclick="bookRoom()">จองห้อง</button>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105">
+                <img src="./images/503769799.jpg" alt="ที่พัก 3" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h2 class="text-xl font-bold mb-2">ที่พัก 3</h2>
+                    <p class="text-gray-700">รายละเอียดที่พัก 3</p>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2 hover:bg-blue-600" onclick="bookRoom()">จองห้อง</button>
+                </div>
+            </div>
+            <!-- เพิ่มที่พักเพิ่มเติมตามต้องการ -->
+        </div>
+    </main>
+
+    <!-- Popup -->
+    <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white p-8 rounded shadow-lg text-center">
+            <h2 class="text-2xl font-bold mb-4">จองห้องพักสำเร็จ</h2>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onclick="closePopup()">ปิด</button>
+        </div>
+    </div>
+
+    <script>
+        function bookRoom() {
+            document.getElementById('popup').classList.remove('hidden');
+        }
+
+        function closePopup() {
+            document.getElementById('popup').classList.add('hidden');
+        }
+    </script>
 </body>
 </html>
