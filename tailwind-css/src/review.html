@@ -187,39 +187,6 @@
                 </div>
             </div>
         </div>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const filterButtons = document.querySelectorAll('.filter-btn');
-                const reviewItems = document.querySelectorAll('.review-item');
-                
-                filterButtons.forEach(button => {
-                    button.addEventListener('click', function() {
-                        filterButtons.forEach(btn => {
-                            btn.classList.remove('active', 'bg-yellow-400', 'text-white');
-                            btn.classList.add('bg-gray-200', 'text-gray-700');
-                        });
-                        
-                        this.classList.add('active', 'bg-yellow-400', 'text-white');
-                        this.classList.remove('bg-gray-200', 'text-gray-700');
-                        
-                        const selectedRating = this.getAttribute('data-rating');
-
-                        reviewItems.forEach(item => {
-                            if (selectedRating === 'all' || item.getAttribute('data-stars') === selectedRating) {
-                                item.style.display = 'block';
-                            } else {
-                                item.style.display = 'none';
-                            }
-                        });
-                    });
-                });
-            });
-        </script>
     </div>
-
-    <script>
-        
-    </script>
 </body>
 </html>

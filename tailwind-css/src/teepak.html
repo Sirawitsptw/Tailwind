@@ -26,7 +26,7 @@
                 <div class="p-4">
                     <h2 class="text-xl font-bold mb-2">ที่พัก 1</h2>
                     <p class="text-gray-700">รายละเอียดที่พัก 1</p>
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2 hover:bg-blue-600" onclick="bookRoom()">จองห้อง</button>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2 hover:bg-blue-600">จองห้อง</button>
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105">
@@ -34,7 +34,7 @@
                 <div class="p-4">
                     <h2 class="text-xl font-bold mb-2">ที่พัก 2</h2>
                     <p class="text-gray-700">รายละเอียดที่พัก 2</p>
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2 hover:bg-blue-600" onclick="bookRoom()">จองห้อง</button>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2 hover:bg-blue-600">จองห้อง</button>
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-md overflow-hidden transform transition duration-500 hover:scale-105">
@@ -42,7 +42,7 @@
                 <div class="p-4">
                     <h2 class="text-xl font-bold mb-2">ที่พัก 3</h2>
                     <p class="text-gray-700">รายละเอียดที่พัก 3</p>
-                    <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2 hover:bg-blue-600" onclick="bookRoom()">จองห้อง</button>
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded mt-2 hover:bg-blue-600">จองห้อง</button>
                 </div>
             </div>
         </div>
@@ -52,18 +52,8 @@
     <div id="popup" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
         <div class="bg-white p-8 rounded shadow-lg text-center">
             <h2 class="text-2xl font-bold mb-4">จองห้องพักสำเร็จ</h2>
-            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600" onclick="closePopup()">ปิด</button>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">ปิด</button>
         </div>
     </div>
-
-    <script>
-        function bookRoom() {
-            document.getElementById('popup').classList.remove('hidden');
-        }
-
-        function closePopup() {
-            document.getElementById('popup').classList.add('hidden');
-        }
-    </script>
 </body>
 </html>
